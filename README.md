@@ -8,19 +8,21 @@ Lecture, four hours; outside study, eight hours. Requisite: course 180. Addition
  
 
 For example, here is the chunking of the above sample:  
-```<format> Lecture, four hours; outside study, eight hours. </format> <requisite> Requisite: course 180. Additional requisites for each offering announced in advance by department. </requisite> <description> Selections from design, analysis, optimization, and implementation of algorithms; computational complexity and general theory of algorithms; algorithms for particular application areas. </description> <others> Subtitles of some current sections: Principles of Design and Analysis (280A); Distributed Algorithms (280D); Graphs and Networks (280G). <others> <others> May be repeated for credit with consent of instructor and topic change. </others> <grading> Letter grading. </grading>
+```
+<format> Lecture, four hours; outside study, eight hours. </format> <requisite> Requisite: course 180. Additional requisites for each offering announced in advance by department. </requisite> <description> Selections from design, analysis, optimization, and implementation of algorithms; computational complexity and general theory of algorithms; algorithms for particular application areas. </description> <others> Subtitles of some current sections: Principles of Design and Analysis (280A); Distributed Algorithms (280D); Graphs and Networks (280G). <others> <others> May be repeated for credit with consent of instructor and topic change. </others> <grading> Letter grading. </grading>
 ```
 
 ## Execution format: 
 
 python extract.py ucla.model test_raw test-ucla.txt 
 
-(arg1- model arg2- descriptions as lines arg3- tagged file to evaluate text) 
+- arg1 - model 
+- arg2 - descriptions as lines 
+- arg3 - tagged file to evaluate text 
  
 ## Output:  
 
 • Prints Evaluation 
-
 • O/p file – test_generated.txt  
  
 ## Features implemented: 
@@ -38,10 +40,10 @@ python extract.py ucla.model test_raw test-ucla.txt
         features.append('EOS') 
  
  
+## Model Evaluation: 
 
- 
-Model Evaluation: 
-Prediction on training set : 
+### Prediction on training set : 
+
 |  |Precision |   Recall  | F1 Score         |
 |---|--------|-------------|---------------------|
 | format     |  1.000000  | 1.000000  |1.000000  |
@@ -53,7 +55,7 @@ Prediction on training set :
 
 
  
-Prediction on test set : 
+### Prediction on test set : 
 |      |Precision  | Recall |  F1 Score| 
 |---|--------|-------------|---------------------|
 |format     |   1.000000 | 1.00000 | 1.000000| 
